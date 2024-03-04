@@ -1,0 +1,968 @@
+<!DOCTYPE html>
+<html class="no-js" lang="zxx">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <title>Shipment - Logistics and Transportation</title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Place favicon.ico in the root directory -->
+    <link rel="shortcut icon" type="image/x-icon" href="" />
+
+    <!-- CSS here -->
+    <link rel="stylesheet" href="assets/css/bootstrap.css" />
+    <link rel="stylesheet" href="assets/css/animate.css" />
+    <link rel="stylesheet" href="assets/css/swiper-bundle.css" />
+    <link rel="stylesheet" href="assets/css/flaticon.css" />
+    <link rel="stylesheet" href="assets/css/nouislider.css" />
+    <link rel="stylesheet" href="assets/css/jquery-ui.css" />
+    <link rel="stylesheet" href="assets/css/magnific-popup.css" />
+    <link rel="stylesheet" href="assets/css/font-awesome-pro.css" />
+    <link rel="stylesheet" href="assets/css/spacing.css" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+  </head>
+
+  <style>
+    html,
+    body {
+      background-color: #2f3640;
+    }
+
+    .form-holder {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      min-height: 100vh;
+    }
+
+    .form-holder .form-content {
+      position: relative;
+      text-align: center;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 60px;
+    }
+
+    .form-content .form-items {
+      border: 3px solid #fff;
+      padding: 40px;
+      display: inline-block;
+      width: 100%;
+      min-width: 1200px;
+      -webkit-border-radius: 10px;
+      -moz-border-radius: 10px;
+      border-radius: 10px;
+      text-align: left;
+      -webkit-transition: all 0.4s ease;
+      transition: all 0.4s ease;
+    }
+
+    .form-content h3 {
+      color: #fff;
+      text-align: left;
+      font-size: 28px;
+      font-weight: 600;
+      margin-bottom: 5px;
+    }
+
+    .form-content h3.form-title {
+      margin-bottom: 30px;
+    }
+
+    .form-content p {
+      color: #fff;
+      text-align: left;
+      font-size: 17px;
+      font-weight: 300;
+      line-height: 20px;
+      margin-bottom: 30px;
+    }
+
+    .form-content label,
+    .was-validated .form-check-input:invalid ~ .form-check-label,
+    .was-validated .form-check-input:valid ~ .form-check-label {
+      color: #fff;
+    }
+
+    .form-content input[type="text"],
+    .form-content input[type="password"],
+    .form-content input[type="email"],
+    .form-content input[type="number"],
+    .form-content select {
+      /* width: 100%; */
+      padding: 9px 20px;
+      text-align: left;
+      border: 0;
+      outline: 0;
+      border-radius: 6px;
+      background-color: #fff;
+      font-size: 15px;
+      font-weight: 300;
+      color: #8d8d8d;
+      -webkit-transition: all 0.3s ease;
+      transition: all 0.3s ease;
+      margin-top: 16px;
+    }
+
+    .btn-primary {
+      background-color: #6c757d;
+      outline: none;
+      border: 0px;
+      box-shadow: none;
+    }
+
+    .btn-primary:hover,
+    .btn-primary:focus,
+    .btn-primary:active {
+      background-color: #495056;
+      outline: none !important;
+      border: none !important;
+      box-shadow: none;
+    }
+
+    .form-content textarea {
+      position: static !important;
+      /* width: 100%; */
+      padding: 8px 20px;
+      border-radius: 6px;
+      text-align: left;
+      background-color: #fff;
+      border: 0;
+      font-size: 15px;
+      font-weight: 300;
+      color: #8d8d8d;
+      outline: none;
+      resize: none;
+      height: 120px;
+      -webkit-transition: none;
+      transition: none;
+      margin-bottom: 14px;
+    }
+
+    .form-content textarea:hover,
+    .form-content textarea:focus {
+      border: 0;
+      background-color: #ebeff8;
+      color: #8d8d8d;
+    }
+
+    .mv-up {
+      margin-top: -9px !important;
+      margin-bottom: 8px !important;
+    }
+
+    .invalid-feedback {
+      color: #ff606e;
+    }
+
+    .valid-feedback {
+      color: #2acc80;
+    }
+  </style>
+  <body>
+    <!-- back to top start -->
+    <div class="back-to-top-wrapper">
+      <button id="back_to_top" type="button" class="back-to-top-btn">
+        <svg
+          width="12"
+          height="7"
+          viewBox="0 0 12 7"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M11 6L6 1L1 6"
+            stroke="currentColor"
+            stroke-width="1.5"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+        </svg>
+      </button>
+    </div>
+    <!-- back to top end -->
+    <!-- preloader to start -->
+    <div id="loading">
+      <div id="loading-center">
+        <div id="loading-center-absolute">
+          <div class="object" id="object_four"></div>
+          <div class="object" id="object_three"></div>
+          <div class="object" id="object_two"></div>
+          <div class="object" id="object_one"></div>
+        </div>
+      </div>
+    </div>
+    <!-- preloader to end -->
+    <!--  tp-offcanvus-area-start  -->
+    <div class="tpoffcanvas-area">
+      <div class="tpoffcanvas">
+        <div class="tpoffcanvas__close-btn">
+          <button class="close-btn"><i class="fal fa-times"></i></button>
+        </div>
+        <div class="tpoffcanvas__logo">
+          <a href="index.html">
+            <img src="assets/img/new-logo.png" alt="" />
+          </a>
+        </div>
+        <div class="tp-main-menu-mobile"></div>
+        <div class="offcanvas__btn mb-20">
+          <div class="sign-in-icon d-flex justify-content-around">
+            <button class="btn btn-primary" style="margin-right: 10px">
+              <a href="login.html">Login</a>
+            </button>
+            <button class="btn" style="background-color: #ff9f1a">
+              <a href="signup.html">SignUp</a>
+            </button>
+          </div>
+        </div>
+        <div class="offcanvas__contact mb-40">
+          <p class="offcanvas__contact-call">
+            <a href="tel:+964-742-44-763">+123456789</a>
+          </p>
+          <p class="offcanvas__contact-mail">
+            <a href="mailto:info@harry.com">NQLYAT@gmail.com</a>
+          </p>
+        </div>
+        <div class="offcanvas__social">
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-linkedin"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+        </div>
+      </div>
+    </div>
+    <div class="body-overlay"></div>
+    <!--  tp-offcanvus-area end -->
+    <div class="search-popup-overlay"></div>
+    <!-- search popup end -->
+    <!-- header area start -->
+    <header>
+      <div class="main-header d-none d-xl-block">
+        <div class="tp-header__top tp-header__he pt-20 pb-20 p-relative d-none">
+          <div class="tp-header-wrap">
+            <div class="container">
+              <div class="row align-items-center"></div>
+            </div>
+          </div>
+        </div>
+        <div class="tp-header">
+          <div
+            id="header-sticky"
+            class="header-bottom d-flex align-items-center"
+            style="height: 65px; background-color: #34495e"
+          >
+            <div class="container">
+              <div class="row align-items-center">
+                <div class="col-xl-2">
+                  <div class="main-logo">
+                    <a href="index.html"
+                      ><img
+                        src="assets/img/new-logo.png"
+                        alt=""
+                        style="width: 80%"
+                    /></a>
+                  </div>
+                </div>
+                <div class="col-xl-9 text-center">
+                  <div class="tp-header__main-menu main-menu">
+                    <nav class="tp-main-menu-content">
+                      <ul>
+                        <li><a href="index.html">HOME</a></li>
+                        <li class="nav-item has-dropdown">
+                          <a
+                            class="dropdown-toggle"
+                            role="button"
+                            data-bs-toggle="dropdown"
+                            aria-expanded="false"
+                          >
+                            Solutions
+                          </a>
+                          <ul class="tp-submenu" style="text-align: left">
+                            <li>
+                              <a class="dropdown-item" href="solutions.html"
+                                >Solutions</a
+                              >
+                            </li>
+                            <li>
+                              <a class="dropdown-item" href="vendor.html"
+                                >Vendors</a
+                              >
+                            </li>
+                            <li>
+                              <a class="dropdown-item" href="shipper.html"
+                                >Shippers</a
+                              >
+                            </li>
+                            <li>
+                              <a class="dropdown-item" href="broker.html"
+                                >Brokers</a
+                              >
+                            </li>
+                          </ul>
+                        </li>
+                        <li><a href="pricing.html">Pricing</a></li>
+                        <li class="nav-item has-dropdown">
+                          <a
+                            class="nav-link dropdown-toggle"
+                            href="solutions.html"
+                            role="button"
+                            data-bs-toggle="dropdown"
+                            aria-expanded="false"
+                          >
+                            Services
+                          </a>
+                          <ul class="tp-submenu" style="text-align: left">
+                            <li>
+                              <a class="dropdown-item" href="findloads.html"
+                                >Find Load</a
+                              >
+                            </li>
+                            <li>
+                              <a class="dropdown-item" href="findloads.html"
+                                >Post Loads</a
+                              >
+                            </li>
+                            <li>
+                              <a class="dropdown-item" href="Instant.html"
+                                >Request Instant Quote
+                              </a>
+                            </li>
+                            <li>
+                              <a class="dropdown-item" href="Instant.html"
+                                >Request Customs Clearness</a
+                              >
+                            </li>
+                          </ul>
+                        </li>
+                        <li class="nav-item has-dropdown">
+                          <a
+                            class="nav-link dropdown-toggle"
+                            href="about.html"
+                            role="button"
+                            data-bs-toggle="dropdown"
+                            aria-expanded="false"
+                          >
+                            About us
+                          </a>
+                          <ul class="tp-submenu" style="text-align: left">
+                            <li>
+                              <a class="dropdown-item" href="howitworks.html"
+                                >How it Works</a
+                              >
+                            </li>
+                            <li>
+                              <a class="dropdown-item" href="about.html"
+                                >Who are we</a
+                              >
+                            </li>
+                            <li>
+                              <a
+                                style="font-weight: bold; color: orangered"
+                                class="dropdown-item"
+                                href="contact.html"
+                                >Contact us
+                              </a>
+                            </li>
+                          </ul>
+                        </li>
+                      </ul>
+                    </nav>
+                  </div>
+                </div>
+                <div class="col-xl-1">
+                  <div class="sign-in-icon d-flex justify-content-around">
+                    <button class="btn btn-light" style="margin-right: 10px">
+                      <a href="login.html">Login</a>
+                    </button>
+                    <button class="btn" style="background-color: #ff9f1a">
+                      <a href="signup.html">SignUp</a>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="mobile-header d-xl-none">
+        <div class="container">
+          <div class="row align-items-center">
+            <div class="col-6">
+              <div class="main-logo">
+                <a href="index.html"
+                  ><img
+                    src="assets/img/logo--dark.png"
+                    style="width: 60%"
+                    alt=""
+                /></a>
+              </div>
+            </div>
+            <div class="col-6">
+              <div
+                class="mobile__menu d-flex align-items-center justify-content-end"
+              >
+                <!-- <button class="search-open-btn mr-30 d-none d-sm-block">
+                  <i class="flaticon-loupe"></i>
+                </button> -->
+                <a class="tp-menu-bar" href="javascript:void(0)"
+                  ><i class="fa-solid fa-bars"></i
+                ></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <!-- header area end -->
+    <!--  Form -->
+    <div class="form-body">
+      <div class="row">
+        <div class="form-holder">
+          <div class="form-content">
+            <div class="form-items">
+              <h3 class="text-center">Custom clearness request form</h3>
+              <p class="text-center">Service Request</p>
+              <form class="requires-validation" novalidate>
+                <div class="row">
+                  <div class="col-6">
+                    <input
+                      class="form-control"
+                      type="text"
+                      name="name"
+                      placeholder="Full Name"
+                      required
+                    />
+                    <div class="valid-feedback">Username field is valid!</div>
+                    <div class="invalid-feedback">
+                      Username field cannot be blank!
+                    </div>
+                  </div>
+
+                  <div class="col-6">
+                    <input
+                      class="form-control"
+                      type="email"
+                      name="email"
+                      placeholder="E-mail Address"
+                      required
+                    />
+                    <div class="valid-feedback">Email field is valid!</div>
+                    <div class="invalid-feedback">
+                      Email field cannot be blank!
+                    </div>
+                  </div>
+
+                  <div class="col-6">
+                    <input
+                      class="form-control"
+                      type="number"
+                      name="phone"
+                      placeholder="Phone Number"
+                      required
+                    />
+                    <div class="valid-feedback">Phone Number is valid!</div>
+                    <div class="invalid-feedback">
+                      Phone Number field cannot be blank!
+                    </div>
+                  </div>
+
+                  <div class="col-6">
+                    <div class="input-group" style="margin-top: 18px">
+                      <input
+                        type="file"
+                        class="form-control"
+                        id="inputGroupFile04"
+                        aria-describedby="inputGroupFileAddon04"
+                        aria-label="Upload"
+                        style="padding: 15px"
+                      />
+                      <button
+                        class="btn btn-outline-secondary"
+                        type="button"
+                        id="inputGroupFileAddon04"
+                      >
+                        Submit Invoice
+                      </button>
+                    </div>
+                  </div>
+
+                  <div class="col-6">
+                    <div class="input-group" style="margin-top: 18px">
+                      <input
+                        type="file"
+                        class="form-control"
+                        id="inputGroupFile04"
+                        aria-describedby="inputGroupFileAddon04"
+                        aria-label="Upload"
+                        style="padding: 15px"
+                      />
+                      <button
+                        class="btn btn-outline-secondary"
+                        type="button"
+                        id="inputGroupFileAddon04"
+                      >
+                        Submit Compass
+                      </button>
+                    </div>
+                  </div>
+
+                  <div class="col-6" style="margin-top: 30px">
+                    <label class="mb-3 mr-1" for="trait"
+                      >Choose your trait:
+                    </label>
+                    <input
+                      type="radio"
+                      class="btn-check"
+                      name="trait"
+                      id="company"
+                      autocomplete="off"
+                      required
+                    />
+                    <label
+                      class="btn btn-sm btn-outline-secondary"
+                      for="company"
+                      >A company or institution</label
+                    >
+                    <input
+                      type="radio"
+                      class="btn-check"
+                      name="trait"
+                      id="personal"
+                      autocomplete="off"
+                      required
+                    />
+                    <label
+                      class="btn btn-sm btn-outline-secondary"
+                      for="personal"
+                      >Personal</label
+                    >
+                    <div class="valid-feedback mv-up">
+                      You selected a trait!
+                    </div>
+                    <div class="invalid-feedback mv-up">
+                      Please select a trait!
+                    </div>
+                  </div>
+
+                  <div class="col-3">
+                    <input
+                      class="form-control"
+                      type="number"
+                      name="commercial"
+                      placeholder="Commercial Registration No"
+                      required
+                    />
+                    <div class="valid-feedback">
+                      Commercial Registration No is valid!
+                    </div>
+                    <div class="invalid-feedback">
+                      Commercial Registration No field cannot be blank!
+                    </div>
+                  </div>
+
+                  <div class="col-3">
+                    <div class="input-group" style="margin-top: 18px">
+                      <input
+                        type="file"
+                        class="form-control"
+                        id="inputGroupFile04"
+                        aria-describedby="inputGroupFileAddon04"
+                        aria-label="Upload"
+                        style="padding: 15px"
+                      />
+                      <button
+                        class="btn btn-outline-secondary"
+                        type="button"
+                        id="inputGroupFileAddon04"
+                      >
+                        Commercial No
+                      </button>
+                    </div>
+                  </div>
+
+                  <div class="col-3">
+                    <input
+                      class="form-control"
+                      type="number"
+                      name="national"
+                      placeholder="National ID number"
+                      required
+                    />
+                    <div class="valid-feedback">
+                      National ID number is valid!
+                    </div>
+                    <div class="invalid-feedback">
+                      National ID number field cannot be blank!
+                    </div>
+                  </div>
+
+                  <div class="col-3">
+                    <div class="input-group" style="margin-top: 18px">
+                      <input
+                        type="file"
+                        class="form-control"
+                        id="inputGroupFile04"
+                        aria-describedby="inputGroupFileAddon04"
+                        aria-label="Upload"
+                        style="padding: 15px"
+                      />
+                      <button
+                        class="btn btn-outline-secondary"
+                        type="button"
+                        id="inputGroupFileAddon04"
+                      >
+                        Attach your ID No
+                      </button>
+                    </div>
+                  </div>
+
+                  <div class="col-6" style="margin-top: 24px">
+                    <h3 style="font-size: 18px">
+                      Do you need a truck related to this application?
+                    </h3>
+                    <div class="form-check">
+                      <input
+                        class="form-check-input"
+                        type="radio"
+                        name="flexRadioDefault"
+                        id="flexRadioDefault1"
+                      />
+                      <label class="form-check-label" for="flexRadioDefault1">
+                        Yes
+                      </label>
+                    </div>
+                    <div class="form-check">
+                      <input
+                        class="form-check-input"
+                        type="radio"
+                        name="flexRadioDefault"
+                        id="flexRadioDefault2"
+                        checked
+                      />
+                      <label class="form-check-label" for="flexRadioDefault2">
+                        No
+                      </label>
+                    </div>
+                  </div>
+
+                  <div class="col-3">
+                    <input
+                      class="form-control"
+                      type="text"
+                      name="type"
+                      placeholder="Load type"
+                      required
+                    />
+                    <div class="valid-feedback">Load type is valid!</div>
+                    <div class="invalid-feedback">
+                      Load type field cannot be blank!
+                    </div>
+                  </div>
+
+                  <div class="col-3">
+                    <input
+                      class="form-control"
+                      type="number"
+                      name="weight"
+                      placeholder="Load Weight"
+                      required
+                    />
+                    <div class="valid-feedback">Load Weight is valid!</div>
+                    <div class="invalid-feedback">
+                      Load Weight field cannot be blank!
+                    </div>
+                  </div>
+
+                  <div class="form-check" style="margin-top: 24px">
+                    <input
+                      class="form-check-input"
+                      type="checkbox"
+                      value=""
+                      id="invalidCheck"
+                      required
+                    />
+                    <label class="form-check-label"
+                      >I confirm that all data are correct and the terms and
+                      conditions</label
+                    >
+                    <div class="invalid-feedback">
+                      Please confirm that the entered data are all correct!
+                    </div>
+                  </div>
+
+                  <div class="form-button mt-3">
+                    <button id="submit" type="submit" class="btn btn-primary">
+                      Submit
+                    </button>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!--  Form -->
+
+    <!-- footer area start -->
+    <footer>
+      <div class="footer-area theme-background pt-120 pb-80 p-relative fix">
+        <div class="tp-footer__right-bg wow slideInLeft">
+          <img src="assets/img/footer/footer-left-trns.png" alt="" />
+        </div>
+        <div class="tp-footer__car">
+          <img
+            class="tp-footer__shape-1 movingX"
+            src="assets/img/footer/footer-car.png"
+            alt=""
+          />
+        </div>
+        <div class="container">
+          <div class="row">
+            <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6">
+              <div
+                class="tp-footer__widget tp-footer-col-1 mb-40 wow fadeInUp"
+                data-wow-duration=".9s"
+                data-wow-delay=".3s"
+              >
+                <a href="index.html" class="tp-footer__widget-logo">
+                  <img
+                    src="assets/img/white-new-logo.png"
+                    alt=""
+                    style="width: 200px; height: 125px"
+                  />
+                </a>
+                <div class="tp-footer__text mt-15 mb-25">
+                  <p>
+                    Desires to obtain pain of it because it is pain, but
+                    occasionally circum
+                  </p>
+                </div>
+                <div class="tp-footer__contact-info tp-footer__icon-space">
+                  <ul>
+                    <li>
+                      <span>
+                        <i class="fa-solid fa-square-phone"></i>
+                      </span>
+                      <a href="tel:+92487(9098)98765">+92 487 (9098) 98765</a>
+                    </li>
+                    <li>
+                      <span>
+                        <i class="fa-sharp fa-solid fa-envelope"></i>
+                      </span>
+                      <a href="mailto:contact@info.com">Nqlyat@gmail.com</a>
+                    </li>
+                    <li>
+                      <span>
+                        <i class="flaticon-location"></i>
+                      </span>
+                      <a
+                        href="https://www.google.com/maps/@41.6758525,-86.2531698,18.17z"
+                        target="_blank"
+                        >27 Division St, Sans fransisco , USA
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6">
+              <div
+                class="tp-footer__widget tp-footer-col-2 mb-40 fix wow fadeInUp"
+                data-wow-duration=".9s"
+                data-wow-delay=".5s"
+              >
+                <h4 class="tp-footer__widget-title">Our Navigation</h4>
+                <div class="tp-footer__content">
+                  <ul>
+                    <li>
+                      <a href="#"
+                        ><i class="fa-sharp fa-solid fa-plus"></i> About</a
+                      >
+                    </li>
+                    <li>
+                      <a href="#"
+                        ><i class="fa-sharp fa-solid fa-plus"></i> Meet the
+                        Team</a
+                      >
+                    </li>
+                    <li>
+                      <a href="#"
+                        ><i class="fa-sharp fa-solid fa-plus"></i> News &
+                        Media</a
+                      >
+                    </li>
+                    <li>
+                      <a href="#"
+                        ><i class="fa-sharp fa-solid fa-plus"></i> Our
+                        Projects</a
+                      >
+                    </li>
+                    <li>
+                      <a href="#"
+                        ><i class="fa-sharp fa-solid fa-plus"></i> Contact</a
+                      >
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6">
+              <div
+                class="tp-footer__widget tp-footer-col-3 mb-40 wow fadeInUp"
+                data-wow-duration=".9s"
+                data-wow-delay=".7s"
+              >
+                <h4 class="tp-footer__widget-title">Subscribe</h4>
+                <div class="tp-footer__content">
+                  <div class="tp-footer__input p-relative mb-30">
+                    <form action="#">
+                      <input type="text" placeholder="Your Email Address" />
+                      <button>SUBSCRIBE</button>
+                    </form>
+                  </div>
+                </div>
+                <div class="tp-footer__subscribe-text">
+                  <p>
+                    Our expertise, as well as our passion for web design, sets
+                    us agenciese
+                  </p>
+                </div>
+                <div class="tp-footer__social">
+                  <ul>
+                    <li>
+                      <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                    </li>
+                    <li>
+                      <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                    </li>
+                    <li>
+                      <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+                    </li>
+                    <li>
+                      <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6">
+              <div
+                class="tp-footer__widget tp-footer-col-4 wow fadeInUp"
+                data-wow-duration=".9s"
+                data-wow-delay=".9s"
+              >
+                <h4 class="tp-footer__widget-title">Our Gallery</h4>
+                <div class="tp-footer__fw-insta">
+                  <ul>
+                    <li>
+                      <a href="#"
+                        ><i class="fa-brands fa-linkedin-in"></i>
+                        <img src="assets/img/instagram/instagram-1.jpg" alt=""
+                      /></a>
+                    </li>
+                    <li>
+                      <a href="#"
+                        ><i class="fa-brands fa-linkedin-in"></i
+                        ><img src="assets/img/instagram/instagram-2.jpg" alt=""
+                      /></a>
+                    </li>
+                    <li>
+                      <a href="#"
+                        ><i class="fa-brands fa-linkedin-in"></i>
+                        <img src="assets/img/instagram/instagram-3.jpg" alt=""
+                      /></a>
+                    </li>
+                    <li>
+                      <a href="#"
+                        ><i class="fa-brands fa-linkedin-in"></i
+                        ><img src="assets/img/instagram/instagram-4.jpg" alt=""
+                      /></a>
+                    </li>
+                    <li>
+                      <a href="#"
+                        ><i class="fa-brands fa-linkedin-in"></i
+                        ><img src="assets/img/instagram/instagram-5.jpg" alt=""
+                      /></a>
+                    </li>
+                    <li>
+                      <a href="#"
+                        ><i class="fa-brands fa-linkedin-in"></i
+                        ><img src="assets/img/instagram/instagram-6.jpg" alt=""
+                      /></a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="tp-footer__bottom pt-25 pb-25">
+        <div class="container">
+          <div class="row">
+            <div class="col-xxl-6 col-lg-6 col-md-7 col-12">
+              <div class="tp-footer__copyright text-md-start text-center">
+                <p>Copyright © 2023 All Rights Reserved</p>
+              </div>
+            </div>
+            <div class="col-xxl-6 col-lg-6 col-md-5 col-12">
+              <div class="tp-footer__menu text-md-end text-center">
+                <ul>
+                  <li><a href="#">Terms of Use</a></li>
+                  <li><a href="#">Privacy Policy</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- footer area end -->
+
+    <script>
+      (function () {
+        "use strict";
+        const forms = document.querySelectorAll(".requires-validation");
+        Array.from(forms).forEach(function (form) {
+          form.addEventListener(
+            "submit",
+            function (event) {
+              if (!form.checkValidity()) {
+                event.preventDefault();
+                event.stopPropagation();
+              }
+
+              form.classList.add("was-validated");
+            },
+            false
+          );
+        });
+      })();
+    </script>
+
+    <!-- JS here -->
+    <script src="assets/js/vendor/jquery.js"></script>
+    <script src="assets/js/vendor/waypoints.js"></script>
+    <script src="assets/js/bootstrap-bundle.js"></script>
+    <script src="assets/js/swiper-bundle.js"></script>
+    <script src="assets/js/nouislider.js"></script>
+    <script src="assets/js/magnific-popup.js"></script>
+    <script src="assets/js/parallax.js"></script>
+    <script src="assets/js/jquery-ui.js"></script>
+    <script src="assets/js/jarallax.js"></script>
+    <script src="assets/js/nice-select.js"></script>
+    <script src="assets/js/counterup.js"></script>
+    <script src="assets/js/jarallax.js"></script>
+    <script src="assets/js/wow.js"></script>
+    <script src="assets/js/isotope-pkgd.js"></script>
+    <script src="assets/js/imagesloaded-pkgd.js"></script>
+    <script src="assets/js/ajax-form.js"></script>
+    <script src="assets/js/main.js"></script>
+  </body>
+</html>
