@@ -71,10 +71,18 @@
         <div class="tp-main-menu-mobile"></div>
         <div class="offcanvas__btn mb-20">
           <div class="sign-in-icon d-flex justify-content-around">
-            <button class="btn btn-primary" style="margin-right: 10px">
+            <button
+              class="btn btn-primary"
+              style="
+                margin-right: 10px;
+                background-color: #232331;
+                color: #fff;
+                border: 1px solid #fff;
+              "
+            >
               <a href="login.html">Login</a>
             </button>
-            <button class="btn" style="background-color: #ff9f1a">
+            <button class="btn" style="background-color: #ca1f26; color: #fff">
               <a href="signup.html">SignUp</a>
             </button>
           </div>
@@ -97,198 +105,209 @@
     </div>
     <div class="body-overlay"></div>
     <!--  tp-offcanvus-area end -->
-    <!-- header area start -->
-    <header>
-      <div class="main-header d-none d-xl-block">
-        <div class="tp-header__top tp-header__he pt-20 pb-20 p-relative d-none">
-          <div class="tp-header-wrap">
-            <div class="container">
-              <div class="row align-items-center"></div>
-            </div>
-          </div>
-        </div>
-        <div class="tp-header">
-          <div
-            id="header-sticky"
-            class="header-bottom d-flex align-items-center"
-            style="height: 65px; background-color: #34495e"
-          >
-            <div class="container">
-              <div class="row align-items-center">
-                <div class="col-xl-2">
-                  <div class="main-logo">
-                    <a href="index.html"
-                      ><img
-                        src="assets/img/new-logo.png"
-                        alt=""
-                        style="width: 80%"
-                    /></a>
-                  </div>
-                </div>
-                <div class="col-xl-9 text-center">
-                  <div class="tp-header__main-menu main-menu">
-                    <nav class="tp-main-menu-content">
-                      <ul>
-                        <li><a href="index.html">HOME</a></li>
-                        <li class="nav-item has-dropdown">
-                          <a
-                            class="dropdown-toggle"
-                            role="button"
-                            data-bs-toggle="dropdown"
-                            aria-expanded="false"
-                          >
-                            Solutions
-                          </a>
-                          <ul class="tp-submenu" style="text-align: left">
-                            <li>
-                              <a class="dropdown-item" href="solutions.html"
-                                >Solutions</a
-                              >
-                            </li>
-                            <li>
-                              <a class="dropdown-item" href="vendor.html"
-                                >Vendors</a
-                              >
-                            </li>
-                            <li>
-                              <a class="dropdown-item" href="shipper.html"
-                                >Shippers</a
-                              >
-                            </li>
-                            <li>
-                              <a class="dropdown-item" href="broker.html"
-                                >Brokers</a
-                              >
-                            </li>
-                          </ul>
-                        </li>
-                        <li><a href="pricing.html">Pricing</a></li>
-                        <li class="nav-item has-dropdown">
-                          <a
-                            class="nav-link dropdown-toggle"
-                            href="solutions.html"
-                            role="button"
-                            data-bs-toggle="dropdown"
-                            aria-expanded="false"
-                          >
-                            Services
-                          </a>
-                          <ul class="tp-submenu" style="text-align: left">
-                            <li>
-                              <a class="dropdown-item" href="findloads.html"
-                                >Find Load</a
-                              >
-                            </li>
-                            <li>
-                              <a class="dropdown-item" href="findloads.html"
-                                >Post Loads</a
-                              >
-                            </li>
-                            <li>
-                              <a class="dropdown-item" href="Instant.html"
-                                >Request Instant Quote
-                              </a>
-                            </li>
-                            <li>
-                              <a class="dropdown-item" href="Instant.html"
-                                >Request Customs Clearness</a
-                              >
-                            </li>
-                          </ul>
-                        </li>
-                        <li class="nav-item has-dropdown">
-                          <a
-                            class="nav-link dropdown-toggle"
-                            href="about.html"
-                            role="button"
-                            data-bs-toggle="dropdown"
-                            aria-expanded="false"
-                          >
-                            About us
-                          </a>
-                          <ul class="tp-submenu" style="text-align: left">
-                            <li>
-                              <a class="dropdown-item" href="howitworks.html"
-                                >How it Works</a
-                              >
-                            </li>
-                            <li>
-                              <a class="dropdown-item" href="about.html"
-                                >Who are we</a
-                              >
-                            </li>
-                            <li>
-                              <a
-                                style="font-weight: bold; color: orangered"
-                                class="dropdown-item"
-                                href="contact.html"
-                                >Contact us
-                              </a>
-                            </li>
-                          </ul>
-                        </li>
-                      </ul>
-                    </nav>
-                  </div>
-                </div>
-                <div class="col-xl-1">
-                  <div class="sign-in-icon d-flex justify-content-around">
-                    <button class="btn btn-light" style="margin-right: 10px">
-                      <a href="login.html">Login</a>
-                    </button>
-                    <button class="btn" style="background-color: #ff9f1a">
-                      <a href="signup.html">SignUp</a>
-                    </button>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="mobile-header d-xl-none">
-        <div class="container">
-          <div class="row align-items-center">
-            <div class="col-6">
-              <div class="main-logo">
-                <a href="index.html"
-                  ><img
-                    src="assets/img/logo--dark.png"
-                    style="width: 60%"
-                    alt=""
-                /></a>
-              </div>
-            </div>
-            <div class="col-6">
-              <div
-                class="mobile__menu d-flex align-items-center justify-content-end"
-              >
-                <!-- <button class="search-open-btn mr-30 d-none d-sm-block">
-                  <i class="flaticon-loupe"></i>
-                </button> -->
-                <a class="tp-menu-bar" href="javascript:void(0)"
-                  ><i class="fa-solid fa-bars"></i
-                ></a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </header>
-    <!-- header area end -->
 
     <!-- Start main -->
     <div
       class="find-load"
       style="
         position: relative;
-        height: 90vh;
+        height: 100vh;
         background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
           url(./assets/img/landing-top-2.jpg);
         background-size: cover;
         background-position: center;
       "
     >
+      <header>
+        <div class="main-header d-none d-xl-block">
+          <div
+            class="tp-header__top tp-header__he pt-20 pb-20 p-relative d-none"
+          >
+            <div class="tp-header-wrap">
+              <div class="container">
+                <div class="row align-items-center"></div>
+              </div>
+            </div>
+          </div>
+          <div class="tp-header">
+            <div
+              id="header-sticky"
+              class="header-bottom d-flex align-items-center"
+              style="height: 65px; background-color: #232331"
+            >
+              <div class="container">
+                <div class="row align-items-center">
+                  <div class="col-xl-2">
+                    <div class="main-logo">
+                      <a href="index.html"
+                        ><img
+                          src="assets/img/nqlyat-logo-white.png"
+                          alt=""
+                          style="width: 80%"
+                      /></a>
+                    </div>
+                  </div>
+                  <div class="col-xl-9 text-center">
+                    <div class="tp-header__main-menu main-menu">
+                      <nav class="tp-main-menu-content">
+                        <ul>
+                          <li><a href="index.html">HOME</a></li>
+                          <li class="nav-item has-dropdown">
+                            <a
+                              class="dropdown-toggle"
+                              role="button"
+                              data-bs-toggle="dropdown"
+                              aria-expanded="false"
+                            >
+                              Solutions
+                            </a>
+                            <ul class="tp-submenu" style="text-align: left">
+                              <li>
+                                <a class="dropdown-item" href="solutions.html"
+                                  >Solutions</a
+                                >
+                              </li>
+                              <li>
+                                <a class="dropdown-item" href="vendor.html"
+                                  >Vendors</a
+                                >
+                              </li>
+                              <li>
+                                <a class="dropdown-item" href="shipper.html"
+                                  >Shippers</a
+                                >
+                              </li>
+                              <li>
+                                <a class="dropdown-item" href="broker.html"
+                                  >Brokers</a
+                                >
+                              </li>
+                            </ul>
+                          </li>
+                          <li><a href="pricing.html">Pricing</a></li>
+                          <li class="nav-item has-dropdown">
+                            <a
+                              class="nav-link dropdown-toggle"
+                              href="solutions.html"
+                              role="button"
+                              data-bs-toggle="dropdown"
+                              aria-expanded="false"
+                            >
+                              Services
+                            </a>
+                            <ul class="tp-submenu" style="text-align: left">
+                              <li>
+                                <a class="dropdown-item" href="findloads.html"
+                                  >Find Load</a
+                                >
+                              </li>
+                              <li>
+                                <a class="dropdown-item" href="findloads.html"
+                                  >Post Loads</a
+                                >
+                              </li>
+                              <li>
+                                <a class="dropdown-item" href="Instant.html"
+                                  >Request Instant Quote
+                                </a>
+                              </li>
+                              <li>
+                                <a class="dropdown-item" href="shipment.html"
+                                  >Request Customs Clearness</a
+                                >
+                              </li>
+                            </ul>
+                          </li>
+                          <li class="nav-item has-dropdown">
+                            <a
+                              class="nav-link dropdown-toggle"
+                              href="about.html"
+                              role="button"
+                              data-bs-toggle="dropdown"
+                              aria-expanded="false"
+                            >
+                              About us
+                            </a>
+                            <ul class="tp-submenu" style="text-align: left">
+                              <li>
+                                <a class="dropdown-item" href="howitworks.html"
+                                  >How it Works</a
+                                >
+                              </li>
+                              <li>
+                                <a class="dropdown-item" href="about.html"
+                                  >Who are we</a
+                                >
+                              </li>
+                              <li>
+                                <a
+                                  style="font-weight: bold; color: orangered"
+                                  class="dropdown-item"
+                                  href="contact.html"
+                                  >Contact us
+                                </a>
+                              </li>
+                            </ul>
+                          </li>
+                        </ul>
+                      </nav>
+                    </div>
+                  </div>
+                  <div class="col-xl-1">
+                    <div class="sign-in-icon d-flex justify-content-around">
+                      <button
+                        class="btn"
+                        style="
+                          margin-right: 10px;
+                          background-color: #232331;
+                          color: #fff;
+                          border: 1px solid #fff;
+                        "
+                      >
+                        <a href="login.html">Login</a>
+                      </button>
+                      <button
+                        class="btn"
+                        style="background-color: #ca1f26; color: #fff"
+                      >
+                        <a href="signup.html">SignUp</a>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="mobile-header d-xl-none">
+          <div class="container">
+            <div class="row align-items-center">
+              <div class="col-6">
+                <div class="main-logo">
+                  <a href="index.html"
+                    ><img
+                      src="assets/img/logo--dark.png"
+                      style="width: 60%"
+                      alt=""
+                  /></a>
+                </div>
+              </div>
+              <div class="col-6">
+                <div
+                  class="mobile__menu d-flex align-items-center justify-content-end"
+                >
+                  <!-- <button class="search-open-btn mr-30 d-none d-sm-block">
+                  <i class="flaticon-loupe"></i>
+                </button> -->
+                  <a class="tp-menu-bar" href="javascript:void(0)"
+                    ><i class="fa-solid fa-bars"></i
+                  ></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
       <div class="container">
         <div class="row">
           <div class="col-12 text-center" style="margin: 50px 0 70px 0">
@@ -303,7 +322,7 @@
           <div class="col-12 text-center">
             <h3
               class="text-center fw-bold mb-3"
-              style="color: #00a8ff; font-weight: bold"
+              style="color: #16a085; font-weight: bold"
             >
               Most recent Loads:
             </h3>
@@ -345,13 +364,13 @@
             <div class="d-flex align-content-center justify-content-around">
               <button
                 class="btn p-2 mt-4"
-                style="width: 120px; background-color: #34495e; color: #fff"
+                style="width: 120px; background-color: #ca1f26; color: #fff"
               >
                 <a href="findloads.html">Find Load</a>
               </button>
               <button
                 class="btn p-2 mt-4"
-                style="width: 120px; background-color: #ff9f1a"
+                style="width: 120px; background-color: #232331; color: #fff"
               >
                 <a href="Instant.html">Instant Quote</a>
               </button>
@@ -1242,7 +1261,7 @@
         </div>
         <div class="container">
           <div class="row">
-            <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6">
+            <div class="col-xl-4 col-lg-4 col-md-4 col-sm-6">
               <div
                 class="tp-footer__widget tp-footer-col-1 mb-40 wow fadeInUp"
                 data-wow-duration=".9s"
@@ -1250,15 +1269,15 @@
               >
                 <a href="index.html" class="tp-footer__widget-logo">
                   <img
-                    src="assets/img/white-new-logo.png"
+                    src="assets/img/nqlyat-logo-white.png"
                     alt=""
                     style="width: 200px; height: 125px"
                   />
                 </a>
                 <div class="tp-footer__text mt-15 mb-25">
                   <p>
-                    Desires to obtain pain of it because it is pain, but
-                    occasionally circum
+                    Join over 150+ satisfied owner-operators who trust our load
+                    board to find and book loads
                   </p>
                 </div>
                 <div class="tp-footer__contact-info tp-footer__icon-space">
@@ -1299,7 +1318,7 @@
                 </div>
               </div>
             </div>
-            <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6">
+            <div class="col-xl-4 col-lg-4 col-md-4 col-sm-6">
               <div
                 class="tp-footer__widget tp-footer-col-2 mb-40 fix wow fadeInUp"
                 data-wow-duration=".9s"
@@ -1326,8 +1345,8 @@
                       >
                     </li>
                     <li>
-                      <a href="cookie.html"
-                        ><i class="fa-sharp fa-solid fa-plus"></i> Cookie
+                      <a href="cookies.html"
+                        ><i class="fa-sharp fa-solid fa-plus"></i> Cookies
                         Policy</a
                       >
                     </li>
@@ -1341,7 +1360,7 @@
                 </div>
               </div>
             </div>
-            <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6">
+            <div class="col-xl-4 col-lg-4 col-md-4 col-sm-6">
               <div
                 class="tp-footer__widget tp-footer-col-3 mb-40 wow fadeInUp"
                 data-wow-duration=".9s"
@@ -1387,55 +1406,6 @@
                       <a href="https://t.me/nqlyat_sa"
                         ><i class="fa-brands fa-telegram"></i
                       ></a>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-            <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6">
-              <div
-                class="tp-footer__widget tp-footer-col-4 wow fadeInUp"
-                data-wow-duration=".9s"
-                data-wow-delay=".9s"
-              >
-                <h4 class="tp-footer__widget-title">Our Gallery</h4>
-                <div class="tp-footer__fw-insta">
-                  <ul>
-                    <li>
-                      <a href="#"
-                        ><i class="fa-brands fa-linkedin-in"></i>
-                        <img src="assets/img/instagram/instagram-1.jpg" alt=""
-                      /></a>
-                    </li>
-                    <li>
-                      <a href="#"
-                        ><i class="fa-brands fa-linkedin-in"></i
-                        ><img src="assets/img/instagram/instagram-2.jpg" alt=""
-                      /></a>
-                    </li>
-                    <li>
-                      <a href="#"
-                        ><i class="fa-brands fa-linkedin-in"></i>
-                        <img src="assets/img/instagram/instagram-3.jpg" alt=""
-                      /></a>
-                    </li>
-                    <li>
-                      <a href="#"
-                        ><i class="fa-brands fa-linkedin-in"></i
-                        ><img src="assets/img/instagram/instagram-4.jpg" alt=""
-                      /></a>
-                    </li>
-                    <li>
-                      <a href="#"
-                        ><i class="fa-brands fa-linkedin-in"></i
-                        ><img src="assets/img/instagram/instagram-5.jpg" alt=""
-                      /></a>
-                    </li>
-                    <li>
-                      <a href="#"
-                        ><i class="fa-brands fa-linkedin-in"></i
-                        ><img src="assets/img/instagram/instagram-6.jpg" alt=""
-                      /></a>
                     </li>
                   </ul>
                 </div>
